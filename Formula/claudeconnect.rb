@@ -53,8 +53,9 @@ class Claudeconnect < Formula
   def install
     virtualenv_install_with_resources
 
-    # Install cryptography from wheel (requires Rust to build from source)
-    system libexec/"bin/pip", "install", "cryptography"
+    # Install cryptography from pre-built wheel (building from source requires Rust)
+    # Use --only-binary to ensure we get the wheel, not source
+    system libexec/"bin/pip", "install", "--only-binary=:all:", "cryptography"
   end
 
   test do
