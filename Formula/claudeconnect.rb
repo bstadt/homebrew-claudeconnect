@@ -3,11 +3,12 @@ class Claudeconnect < Formula
 
   desc "Connect contextualized Claude instances with encrypted context sharing"
   homepage "https://claudeconnect.io"
-  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "72673e0cb471ea135e1414f0eabffdf3a72276587622c51a5381206e2288cc55"
+  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "e81c11df8cec5dc76888c7d07641da1a59135d00527e6019bdfa8af452bc5a08"
   license "MIT"
 
   depends_on "python@3.12"
+  depends_on "openssl@3"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
@@ -47,6 +48,21 @@ class Claudeconnect < Formula
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz"
     sha256 "41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703"
+  end
+
+  resource "cryptography" do
+    url "https://files.pythonhosted.org/packages/cd/25/4ce80c78963834b8a9fd1cc1266be5ed8d1840785c0f2e1b73b8d128d505/cryptography-44.0.0.tar.gz"
+    sha256 "cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02"
+  end
+
+  resource "cffi" do
+    url "https://files.pythonhosted.org/packages/fc/97/c783634571f8ed567e57b04aca003d1fcfa8c8a540625f8752accf5112e7/cffi-1.17.2.tar.gz"
+    sha256 "3aa9f838cf17b04dddf8d1725fcc51cb87502c9e41072cdbfe2733d6f6926cf3"
+  end
+
+  resource "pycparser" do
+    url "https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz"
+    sha256 "491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"
   end
 
   def install
