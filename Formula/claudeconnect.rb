@@ -1,14 +1,13 @@
 class Claudeconnect < Formula
   include Language::Python::Virtualenv
 
-  desc "Connect contextualized Claude instances via SVN-backed context sharing"
+  desc "Connect contextualized Claude instances with encrypted context sharing"
   homepage "https://claudeconnect.io"
-  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "cae5ab0d4df11c6e37f68f44caea252d699a3067e5b9c56a83e8d08e3cf3b482"
+  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "72673e0cb471ea135e1414f0eabffdf3a72276587622c51a5381206e2288cc55"
   license "MIT"
 
   depends_on "python@3.12"
-  depends_on "subversion"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
