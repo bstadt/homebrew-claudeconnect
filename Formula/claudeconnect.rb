@@ -7,8 +7,9 @@ class Claudeconnect < Formula
   sha256 "e81c11df8cec5dc76888c7d07641da1a59135d00527e6019bdfa8af452bc5a08"
   license "MIT"
 
-  depends_on "python@3.12"
+  depends_on "cryptography"
   depends_on "openssl@3"
+  depends_on "python@3.12"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
@@ -52,10 +53,6 @@ class Claudeconnect < Formula
 
   def install
     virtualenv_install_with_resources
-
-    # Install cryptography from pre-built wheel (building from source requires Rust)
-    # Use --only-binary to ensure we get the wheel, not source
-    system libexec/"bin/pip", "install", "--only-binary=:all:", "cryptography"
   end
 
   test do
