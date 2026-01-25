@@ -3,8 +3,8 @@ class Claudeconnect < Formula
 
   desc "Connect contextualized Claude instances with encrypted context sharing"
   homepage "https://claudeconnect.io"
-  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "e81c11df8cec5dc76888c7d07641da1a59135d00527e6019bdfa8af452bc5a08"
+  url "https://github.com/bstadt/cc_daemon/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "54a7f8e30d12dc0d4f161642686e3f29b8885b23bcefdcfb272719c8a1bdd3ae"
   license "MIT"
 
   depends_on "cryptography"
