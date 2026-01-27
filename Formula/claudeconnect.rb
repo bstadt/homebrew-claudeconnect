@@ -55,6 +55,10 @@ class Claudeconnect < Formula
     virtualenv_install_with_resources
   end
 
+  def post_uninstall
+    rm_rf "#{Dir.home}/.claude-connect"
+  end
+
   test do
     system "#{bin}/claudeconnect", "--help"
   end
